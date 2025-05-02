@@ -9,24 +9,27 @@ GAME INSPIRATION: Feed the deep, Octogeddon, Endoparasitic
 Squid 9 to 5
 Collect trash before its time to clock out!
 
-((Stand still to check your watch, waste time to see your time))
+((Stand still to check your watch, waste time to see your time)) --> ONLY IF INITIAL UI TIMER IS TOO BORING
 
 Just squidding
 Inkovenient watch
-Inkvestigator
-Inkompetent
+INKvestigator
+INKompetent
 Inkoming
 Inkling --> An inkling who the perpetrator might be
 
 ---------- DEMO MECHANICS
-Move around
-Spread ink
-Collect trash
-Random trash spawn
-Office building/Character spawn
+X Move around --> Change it point and click (hold to move)? + a lerp
+X Spread ink --> Cooldown
+Physics of the ink spill and colliding
+Make a simple map
+Random trash spawn + Collect trash
 
+((Office building/Character spawn))
 
----------- STORY
+Once done maybe time to think about ways to make the game a little more interesting?
+
+---------- STORY (FOR LATER)
 Intro cutscene/voice acting
 Collecting trash as clues to get an INKLING who the perpetrators might be
 Binder filled with all the collected trash
