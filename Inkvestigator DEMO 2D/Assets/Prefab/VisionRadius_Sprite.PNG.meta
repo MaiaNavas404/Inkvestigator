@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VisionRadius_Sprite_0: 5998033978364324722
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
