@@ -18,6 +18,8 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 	[SerializeField] private float _inkCooldown = 3;
 	[SerializeField] private bool _isCooldown = true;
 
+	public CooldownScript _cooldownScript;
+
 	private Rigidbody2D rb;
 
 	private void Start()
@@ -156,6 +158,7 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 
 		while (elapsedTime < _inkCooldown)
 		{
+			_cooldownScript.Being(elapsedTime, _inkCooldown);
 			elapsedTime += Time.deltaTime;
 			yield return null;
 		}
