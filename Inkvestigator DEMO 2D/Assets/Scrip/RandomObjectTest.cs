@@ -5,7 +5,7 @@ public class RandomObjectTest : MonoBehaviour
 {
 
     Vector2 randomPosition;
-    [SerializeField] private GameObject _spawnObject; // can asign any prefab in the Unity inspector
+    [SerializeField] private GameObject _spawnObject; // can assign any prefab in the Unity inspector
     [SerializeField] private int _spawnAmount = 8; // amount of objects that will spawn
     [SerializeField] private float _xRange = 3f; // range for x axis
     [SerializeField] private float _yRange = 3f; // range for y axis
