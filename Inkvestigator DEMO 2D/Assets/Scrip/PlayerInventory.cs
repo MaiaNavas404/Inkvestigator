@@ -2,21 +2,23 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    public int NumberOfItems { get; private set; }
+    //public int NumberOfItems { get; private set; }
 
-    public void ItemsCollected()
+    [Header("Max Items")]
+    [SerializeField] private int _maxNumOfItems;
+
+    [Header("UI")]
+    [SerializeField] private ItemUIScript _itemUiScript;
+
+	private void Start()
+	{
+		_itemUiScript.UpdateNumberOfItems(_maxNumOfItems);
+	}
+
+	public void ItemsCollected()
     {
-        NumberOfItems++;
-    }
-    //// Start is called once before the first execution of Update after the MonoBehaviour is created
-    //void Start()
-    //{
-        
-    //}
-
-    //// Update is called once per frame
-    //void Update()
-    //{
-        
-    //}
+        if (_maxNumOfItems > 0)
+            _maxNumOfItems--;
+        _itemUiScript.UpdateNumberOfItems(_maxNumOfItems);
+	}
 }

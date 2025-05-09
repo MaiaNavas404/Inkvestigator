@@ -7,6 +7,7 @@ using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class CharcaterControllerIgnacio : MonoBehaviour
 {
+	[Header("Movement")]
 	public float _moveSpeed = 10f;
 	private Vector3 _mousePosition;
 	private Vector3 _targetPosition;

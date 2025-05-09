@@ -99,9 +99,11 @@ GameObject:
   - component: {fileID: 8329431542873038054}
   - component: {fileID: 6274178874913975710}
   - component: {fileID: 7747332207666772642}
-  m_Layer: 0
+  - component: {fileID: 4054342038755657593}
+  - component: {fileID: 8326971046345167094}
+  m_Layer: 3
   m_Name: Ignacio
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,3 +243,33 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
+--- !u!114 &4054342038755657593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759061296444000310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7986ce65979f244cbbac4e9255cae44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxNumOfItems: 0
+--- !u!114 &8326971046345167094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759061296444000310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8d580765f2260446b24cab92a9d8aec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 10
+  _ink: {fileID: 1862174988182990745, guid: 4c19431da1c48f140b214ffd0fdfb3d4, type: 3}
+  _inkCooldown: 1.5
+  _isCooldown: 1
+  _cooldownScript: {fileID: 0}
