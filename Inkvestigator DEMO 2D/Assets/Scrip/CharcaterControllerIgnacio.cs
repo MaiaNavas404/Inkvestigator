@@ -18,6 +18,7 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 	[SerializeField] private GameObject _ink;
 	[SerializeField] private float _inkCooldown = 3;
 	[SerializeField] private bool _isCooldown = true;
+	[SerializeField] private float _inkXSize = 8;
 
 	public CooldownScript _cooldownScript;
 
@@ -148,7 +149,7 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 				float distance = hit.distance;
 
 				// Scale the ink based on the distance
-				inkInstance.transform.localScale = new Vector3(5, distance, 1);
+				inkInstance.transform.localScale = new Vector3(_inkXSize, distance, 1);
 			}
 		}
 	}
