@@ -3,7 +3,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 using System.Collections;
-using static UnityEditor.ShaderGraph.Internal.KeywordDependentCollection;
 
 public class CharcaterControllerIgnacio : MonoBehaviour
 {
