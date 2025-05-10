@@ -11,7 +11,7 @@ public class CooldownScript : MonoBehaviour
 	//	Pause = !Pause;
 	//}
 
-	[SerializeField] private Image uiFill;
+	[SerializeField] private Image _uiFill;
 
 	private float _totalCooldownDuration;
 
@@ -30,7 +30,7 @@ public class CooldownScript : MonoBehaviour
 	{
 		while (_remainingDuration >= 0)
 		{
-			uiFill.fillAmount = Mathf.InverseLerp(0, _totalCooldownDuration, _remainingDuration);
+			_uiFill.fillAmount = Mathf.InverseLerp(0, _totalCooldownDuration, _remainingDuration);
 			//_remainingDuration--;
 			yield return new WaitForSeconds(1f);
 			//if (!Pause)

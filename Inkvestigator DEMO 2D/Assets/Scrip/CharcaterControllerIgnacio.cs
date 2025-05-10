@@ -22,11 +22,11 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 
 	public CooldownScript _cooldownScript;
 
-	private Rigidbody2D rb;
+	private Rigidbody2D _rb;
 
 	private void Start()
 	{
-		rb = GetComponent<Rigidbody2D>();
+		_rb = GetComponent<Rigidbody2D>();
 		_targetPosition = transform.position;
 	}
 
@@ -63,7 +63,7 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 		}
 
 		// Rotation, Facing the direction.
-		rb.MoveRotation(Mathf.Atan2(_targetRotation.y, _targetRotation.x) * Mathf.Rad2Deg - 90f);
+		_rb.MoveRotation(Mathf.Atan2(_targetRotation.y, _targetRotation.x) * Mathf.Rad2Deg - 90f);
 
 		// Check for wall collision
 		RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, radius, direction, moveStep, LayerMask.GetMask("Wall"));
@@ -71,7 +71,7 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 		if (hits.Length == 0 && direction.magnitude > 0) // Move if there is no Wall
 		{
 			Vector2 moveForce = direction * _moveSpeed;
-			rb.linearVelocity = moveForce;  // Use linearVelocity instead of velocity
+			_rb.linearVelocity = moveForce;  // Use linearVelocity instead of velocity
 		}
 		else if (hits.Length == 1) // Move if there is 1 Wall
 		{
@@ -87,13 +87,13 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 
 				// Apply sliding force
 				Vector2 slideForce = slideDirection * _moveSpeed;
-				rb.linearVelocity = slideForce;
+				_rb.linearVelocity = slideForce;
 			}
 			else
 			{
 				// Moving away from the wall, normal movement
 				Vector2 moveForce = direction * _moveSpeed;
-				rb.linearVelocity = moveForce;
+				_rb.linearVelocity = moveForce;
 			}
 		}
 		else
@@ -112,12 +112,12 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 			{
 				// Apply movement force
 				Vector2 moveForce = direction * _moveSpeed;
-				rb.linearVelocity = moveForce;
+				_rb.linearVelocity = moveForce;
 			}
 			else
 			{
 				// Stop movement if tring to go into corner
-				rb.linearVelocity = Vector2.zero;  // Zero out the velocity to stop jittering
+				_rb.linearVelocity = Vector2.zero;  // Zero out the velocity to stop jittering
 			}
 		}
 	}

@@ -11,31 +11,33 @@ public class TimerScript : MonoBehaviour
 	//	Pause = !Pause;
 	//}
 
-	[SerializeField] private Image uiFill;
+	[SerializeField] private Image _uiFill;
 
-	public int Duration;
+	public int _duration;
 
-	private int remainingDuration;
+	private int _remainingDuration;
+
+	[SerializeField] private GameObject _gameOverPanel;  // assign in inspector
 
 	//private bool Pause;
 
 	private void Start()
 	{
-		Being(Duration);
+		Being(_duration);
 	}
 
 	private void Being(int Second)
 	{
-		remainingDuration = Second;
+		_remainingDuration = Second;
 		StartCoroutine(UpdateTimer());
 	}
 
 	private IEnumerator UpdateTimer()
 	{
-		while (remainingDuration >= 0)
+		while (_remainingDuration >= 0)
 		{
-			uiFill.fillAmount = Mathf.InverseLerp(0, Duration, remainingDuration);
-			remainingDuration--;
+			_uiFill.fillAmount = Mathf.InverseLerp(0, _duration, _remainingDuration);
+			_remainingDuration--;
 			yield return new WaitForSeconds(1f);
 			//if (!Pause)
 			//{
@@ -48,7 +50,7 @@ public class TimerScript : MonoBehaviour
 
 	private void OnEnd()
 	{
-		//End Time , if want Do something
-		print("End");
+		_gameOverPanel.SetActive(true);
 	}
+
 }

@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class CamaraFollorplayer : MonoBehaviour
 {
-	public Transform target;
-	public Vector3 offset;
+	public Transform _target;
+	public Vector3 _offset;
 
 	void Update()
 	{
 		Vector3 pos = transform.position;
-		pos.x = target.position.x;
-		pos.y = target.position.y;
+		pos.x = _target.position.x;
+		pos.y = _target.position.y;
 		transform.position = pos;
 	}
 }
