@@ -13,6 +13,7 @@ public class TimerScript : MonoBehaviour
 	private int _remainingDuration;
 
 	[SerializeField] private GameObject _gameOverPanel;
+	public CharcaterControllerIgnacio _CharacterController;
 
 	//private bool Pause;
 
@@ -46,6 +47,7 @@ public class TimerScript : MonoBehaviour
 	private void OnEnd()
 	{
 		_gameOverPanel.SetActive(true);
+		_CharacterController._isPaused = true;
 	}
 
 }

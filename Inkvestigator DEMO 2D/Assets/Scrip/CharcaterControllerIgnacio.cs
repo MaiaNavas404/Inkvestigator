@@ -12,6 +12,7 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 	private Vector3 _mousePosition;
 	private Vector3 _targetPosition;
 	private Vector3 _targetRotation;
+	public bool _isPaused = false;
 
 	// INK
 	[Header("INK")]
@@ -43,7 +44,7 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 	private void Movement()
 	{
 		// If the mouse is pressed, set the target position
-		if (Input.GetMouseButton(0))
+		if (Input.GetMouseButton(0) && !_isPaused)
 		{
 			_targetPosition = _mousePosition;
 			_targetPosition.z = 0f;
@@ -57,7 +58,7 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 		float moveStep = _moveSpeed * Time.deltaTime;
 		float radius = 1f;  // radius of the Collider
 
-		if (Input.GetMouseButton(0))
+		if (Input.GetMouseButton(0) && !_isPaused)
 		{
 			_targetRotation = direction;
 		}
@@ -126,7 +127,7 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 
 	private void ThrowInk()
 	{
-		if (Input.GetMouseButtonDown(1) && _isCooldown)
+		if (Input.GetMouseButtonDown(1) && _isCooldown && !_isPaused)
 		{
 			_isCooldown = false;
 			StartCoroutine(Cooldown());
