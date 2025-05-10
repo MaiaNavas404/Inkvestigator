@@ -2,10 +2,8 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    //public int NumberOfItems { get; private set; }
-
     [Header("Max Items")]
-    [SerializeField] private int _maxNumOfItems;
+    public int _maxNumOfItems;
 
     [Header("UI")]
     [SerializeField] private ItemUIScript _itemUiScript;

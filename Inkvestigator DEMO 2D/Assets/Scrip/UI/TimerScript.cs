@@ -6,18 +6,13 @@ using UnityEngine.EventSystems;
 
 public class TimerScript : MonoBehaviour
 {
-	//public void OnPointerClick(PointerEventData eventData)
-	//{
-	//	Pause = !Pause;
-	//}
-
 	[SerializeField] private Image _uiFill;
 
 	public int _duration;
 
 	private int _remainingDuration;
 
-	[SerializeField] private GameObject _gameOverPanel;  // assign in inspector
+	[SerializeField] private GameObject _gameOverPanel;
 
 	//private bool Pause;
 
