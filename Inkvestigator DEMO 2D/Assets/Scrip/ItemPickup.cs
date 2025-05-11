@@ -14,8 +14,6 @@ public class ItemPickup : MonoBehaviour
 				playerInventory.ItemsCollected();
 				gameObject.SetActive(false);
 			}
-
-			Debug.Log("Has Hit the Player");
 		}
 	}
 }
