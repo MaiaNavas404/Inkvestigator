@@ -24,6 +24,8 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 
 	private Rigidbody2D _rb;
 
+	public Animator inkvestigatorAnim;
+
 	private void Start()
 	{
 		_rb = GetComponent<Rigidbody2D>();
@@ -45,11 +47,13 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 		// If the mouse is pressed, set the target position
 		if (Input.GetMouseButton(0) && !_isPaused)
 		{
-			_targetPosition = _mousePosition;
+            inkvestigatorAnim.SetBool("IsMoving", true);
+            _targetPosition = _mousePosition;
 			_targetPosition.z = 0f;
 		}
 		else
 		{
+			inkvestigatorAnim.SetBool("IsMoving", false);
 			_targetPosition = transform.position;   // Stop the movement, And the jitering
 		}
 
