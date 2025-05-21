@@ -859,7 +859,37 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SwimSheet_0: -8524115368265718611
+      SwimSheet_1: -244650286015082317
+      SwimSheet_10: -1328945373696178424
+      SwimSheet_11: -1054112713889664970
+      SwimSheet_12: 5053341403005305258
+      SwimSheet_13: -5092602197974471973
+      SwimSheet_14: -6109113191856358175
+      SwimSheet_15: 2756100825599950784
+      SwimSheet_16: 1098474607115154010
+      SwimSheet_17: -7789562241005287596
+      SwimSheet_18: -707006077164725423
+      SwimSheet_19: 1011993700449428263
+      SwimSheet_2: 6513612292927606601
+      SwimSheet_20: -6662912150121113131
+      SwimSheet_21: 8639513203920928180
+      SwimSheet_22: -2967751105907474344
+      SwimSheet_23: 7732027197206954209
+      SwimSheet_24: 7278618975585975258
+      SwimSheet_25: 5121701628202898288
+      SwimSheet_26: -4018488958807769278
+      SwimSheet_27: -2955785609446488781
+      SwimSheet_28: 7295631042649611485
+      SwimSheet_29: 3645408905927355705
+      SwimSheet_3: 3552932316844945938
+      SwimSheet_4: -18618990963249905
+      SwimSheet_5: 1783852721976763249
+      SwimSheet_6: 6710184146550057524
+      SwimSheet_7: -2041605384174814907
+      SwimSheet_8: -8110078238061517363
+      SwimSheet_9: -913559916984266520
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

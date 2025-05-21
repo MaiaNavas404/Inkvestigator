@@ -12,7 +12,8 @@ public class ItemPickup : MonoBehaviour
 			if (playerInventory != null)
 			{
 				playerInventory.ItemsCollected();
-				gameObject.SetActive(false);
+				Destroy(gameObject);
+
 			}
 		}
 	}
