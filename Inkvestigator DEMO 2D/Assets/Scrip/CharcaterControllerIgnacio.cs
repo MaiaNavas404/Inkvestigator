@@ -16,7 +16,9 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 	// INK
 	[Header("INK")]
 	[SerializeField] private GameObject _ink;
-	[SerializeField] private float _inkCooldown = 3;
+    [SerializeField] private GameObject _inkEnd;
+    [SerializeField] private GameObject _inkBase;
+    [SerializeField] private float _inkCooldown = 3;
 	[SerializeField] private bool _isCooldown = true;
 	[SerializeField] private float _inkXSize = 8;
 
@@ -126,8 +128,6 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 		}
 	}
 
-
-
 	private void ThrowInk()
 	{
 		if (Input.GetMouseButtonDown(1) && _isCooldown && !_isPaused)
@@ -140,11 +140,12 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 
 			if (hit.collider != null)
 			{
-				// Get angle from direction
-				float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+                // Get angle from direction
+                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
 				// Create rotation
 				Quaternion rotation = Quaternion.Euler(0, 0, angle - 90f); // subtract 90 if your prefab points upward
+
 
 				// Instantiate the ink at the hit point
 				Vector3 halfPoint = (transform.position + new Vector3(hit.point.x, hit.point.y, 0f)) / 2;
@@ -152,7 +153,12 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 				GameObject inkInstance = Instantiate(_ink, halfPoint, rotation);
 				float distance = hit.distance;
 
-				// Scale the ink based on the distance
+				// Base and ENd Ink
+				Instantiate(_inkBase, this.transform.position, rotation);
+                Instantiate(_inkEnd, new Vector2 (hit.point.x, hit.point.y), rotation);
+				
+
+				// Scale the ink on the distance
 				inkInstance.transform.localScale = new Vector3(_inkXSize, distance, 1);
 			}
 		}
