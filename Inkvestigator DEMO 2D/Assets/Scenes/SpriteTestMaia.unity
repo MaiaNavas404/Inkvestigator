@@ -4021,6 +4021,10 @@ PrefabInstance:
       propertyPath: _cooldownScript
       value: 
       objectReference: {fileID: 2024516082}
+    - target: {fileID: 2958135838085835316, guid: f7926aa21f12ef94398822b1c501e885, type: 3}
+      propertyPath: inkvestigatorAnim
+      value: 
+      objectReference: {fileID: 1065022658}
     - target: {fileID: 3157322058204119052, guid: f7926aa21f12ef94398822b1c501e885, type: 3}
       propertyPath: m_Name
       value: INKnacio
