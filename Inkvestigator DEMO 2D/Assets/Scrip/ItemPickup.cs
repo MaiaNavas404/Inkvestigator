@@ -13,7 +13,6 @@ public class ItemPickup : MonoBehaviour
 			{
 				playerInventory.ItemsCollected();
 				Destroy(gameObject);
-
 			}
 		}
 	}
