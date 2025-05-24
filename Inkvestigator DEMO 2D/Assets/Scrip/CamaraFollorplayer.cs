@@ -9,9 +9,11 @@ public class CamaraFollorplayer : MonoBehaviour
 	[SerializeField] private float _transitionDuration = 2f;
 	[SerializeField] private GameObject _startBackround;
 
+	public bool _skipIntro = false;
+
 	private float _revealTimer;
 	private float _transitionTimer;
-
+	
 	private bool _isStart = true;
 	private bool _isTransitioning = false;
 	private bool _isFollowingPlayer = false;
@@ -23,13 +25,32 @@ public class CamaraFollorplayer : MonoBehaviour
 	void Start()
 	{
 		_camera = Camera.main;
+
+		if (_skipIntro)
+		{
+			FollowPlayerImmediately();
+			return;
+		}
+
 		_revealTimer = _revealDuration;
 		_playerController._isPaused = true;
 	}
 
 	void Update()
 	{
-		if (_isStart && !_isTransitioning && !_isFollowingPlayer)
+		if (_isFollowingPlayer)
+		{
+			FollowPlayer();
+			return;
+		}
+
+		if (_skipIntro)
+		{
+			FollowPlayerImmediately();
+			return;
+		}
+
+		if (_isStart && !_isTransitioning)
 		{
 			_revealTimer -= Time.deltaTime;
 			if (_revealTimer <= 0f)
@@ -56,15 +77,27 @@ public class CamaraFollorplayer : MonoBehaviour
 				_isFollowingPlayer = true;
 			}
 		}
-		else if (_isFollowingPlayer)
-		{
-			_startBackround.SetActive(false);
-			Vector3 pos = transform.position;
-			pos.x = _playerTarget.position.x;
-			pos.y = _playerTarget.position.y;
-			pos.z = -200f;
-			transform.position = pos;
-			_playerController._isPaused = false;
-		}
+	}
+
+	void FollowPlayer()
+	{
+		_startBackround.SetActive(false);
+		Vector3 pos = transform.position;
+		pos.x = _playerTarget.position.x;
+		pos.y = _playerTarget.position.y;
+		pos.z = -200f;
+		transform.position = pos;
+		_playerController._isPaused = false;
+	}
+
+	void FollowPlayerImmediately()
+	{
+		_isStart = false;
+		_isTransitioning = false;
+		_isFollowingPlayer = true;
+		_camera.orthographicSize = _normalSize;
+		transform.position = new Vector3(_playerTarget.position.x, _playerTarget.position.y, -200f);
+		_startBackround.SetActive(false);
+		_playerController._isPaused = false;
 	}
 }

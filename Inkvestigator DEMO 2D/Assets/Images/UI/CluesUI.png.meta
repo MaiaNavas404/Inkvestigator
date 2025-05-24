@@ -131,8 +131,8 @@ TextureImporter:
       name: CluesUI_1
       rect:
         serializedVersion: 2
-        x: 1487
-        y: 107
+        x: 1472
+        y: 100
         width: 49
         height: 71
       alignment: 0
@@ -145,6 +145,72 @@ TextureImporter:
       bones: []
       spriteID: aba6aa5aef230a4c0800000000000000
       internalID: -4278363576719480134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CluesUI_2
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 47
+        width: 110
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d8d05ec2b6520408c2ca805f2670cc
+      internalID: 1737816373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CluesUI_4
+      rect:
+        serializedVersion: 2
+        x: 1781
+        y: 47
+        width: 110
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c9f4518a97ff74b851e694d761f367
+      internalID: -1564191611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CluesUI_5
+      rect:
+        serializedVersion: 2
+        x: 1905
+        y: 47
+        width: 110
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 051b23e56a97bb249bc27536ad54df7a
+      internalID: 508643969
       vertices: []
       indices: 
       edges: []
@@ -165,6 +231,10 @@ TextureImporter:
     nameFileIdTable:
       CluesUI_0: -8095061217851112899
       CluesUI_1: -4278363576719480134
+      CluesUI_2: 1737816373
+      CluesUI_3: -1732928462
+      CluesUI_4: -1564191611
+      CluesUI_5: 508643969
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
