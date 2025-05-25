@@ -8,11 +8,14 @@ public class CluesCollectionScript : MonoBehaviour
 	[SerializeField] private List<Image> items;
 	[SerializeField] private List<GameObject> worldClues;
 	[SerializeField] private GameObject _ripple;
-	[SerializeField] private RectTransform rippleParent; // Assign your UI canvas or a UI container here
+	[SerializeField] private RectTransform rippleParent; // Assign a UI container (like a Canvas)
 
+	private List<bool> revealed; // Tracks which clues have been revealed
 
 	private void Start()
 	{
+		revealed = new List<bool>(new bool[worldClues.Count]);
+
 		for (int i = 0; i < questions.Count; i++)
 		{
 			questions[i].enabled = true;
@@ -24,14 +27,17 @@ public class CluesCollectionScript : MonoBehaviour
 	{
 		for (int i = 0; i < worldClues.Count; i++)
 		{
-			if (worldClues[i] == null) // If the world object has been destroyed
+			if (!revealed[i] && worldClues[i] == null)
 			{
-				//GameObject ripple = Instantiate(_ripple, rippleParent);
-				//ripple.GetComponent<RectTransform>().position = items[i].transform.position;
+				revealed[i] = true;
+
 				questions[i].enabled = false;
 				items[i].enabled = true;
+
+				// Instantiate ripple at item's UI position
+				GameObject ripple = Instantiate(_ripple, rippleParent);
+				ripple.transform.position = items[i].transform.position;
 			}
 		}
 	}
 }
-
