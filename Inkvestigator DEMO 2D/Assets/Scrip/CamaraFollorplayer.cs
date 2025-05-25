@@ -8,6 +8,7 @@ public class CamaraFollorplayer : MonoBehaviour
 	[SerializeField] private float _normalSize = 13.9f;
 	[SerializeField] private float _transitionDuration = 2f;
 	[SerializeField] private GameObject _startBackround;
+	[SerializeField] private GameObject _topFog;
 
 	public bool _skipIntro = false;
 
@@ -82,6 +83,7 @@ public class CamaraFollorplayer : MonoBehaviour
 	void FollowPlayer()
 	{
 		_startBackround.SetActive(false);
+		_topFog.SetActive(true);
 		Vector3 pos = transform.position;
 		pos.x = _playerTarget.position.x;
 		pos.y = _playerTarget.position.y;
@@ -98,6 +100,7 @@ public class CamaraFollorplayer : MonoBehaviour
 		_camera.orthographicSize = _normalSize;
 		transform.position = new Vector3(_playerTarget.position.x, _playerTarget.position.y, -200f);
 		_startBackround.SetActive(false);
+		_topFog.SetActive(true);
 		_playerController._isPaused = false;
 	}
 }

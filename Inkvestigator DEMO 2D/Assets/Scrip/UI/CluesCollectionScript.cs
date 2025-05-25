@@ -7,6 +7,9 @@ public class CluesCollectionScript : MonoBehaviour
 	[SerializeField] private List<Image> questions;
 	[SerializeField] private List<Image> items;
 	[SerializeField] private List<GameObject> worldClues;
+	[SerializeField] private GameObject _ripple;
+	[SerializeField] private RectTransform rippleParent; // Assign your UI canvas or a UI container here
+
 
 	private void Start()
 	{
@@ -23,6 +26,8 @@ public class CluesCollectionScript : MonoBehaviour
 		{
 			if (worldClues[i] == null) // If the world object has been destroyed
 			{
+				//GameObject ripple = Instantiate(_ripple, rippleParent);
+				//ripple.GetComponent<RectTransform>().position = items[i].transform.position;
 				questions[i].enabled = false;
 				items[i].enabled = true;
 			}
