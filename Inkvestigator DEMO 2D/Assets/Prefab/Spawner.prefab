@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnObject: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
-  _spawnAmount: 8
+  _spawnAmount: 1
   _xRange: 3
   _yRange: 3
   _minDistance: 1
