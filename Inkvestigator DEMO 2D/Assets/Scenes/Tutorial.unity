@@ -4592,6 +4592,11 @@ Transform:
   - {fileID: 130539908}
   m_Father: {fileID: 1396995637}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &535447465 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 797469447009589493, guid: 93f34b6a61e07314a8a7a40b2131b3fa, type: 3}
+  m_PrefabInstance: {fileID: 1884342539}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &536385767
 GameObject:
   m_ObjectHideFlags: 0
@@ -17492,6 +17497,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7201392040498284869, guid: 93f34b6a61e07314a8a7a40b2131b3fa, type: 3}
+      propertyPath: _ripple
+      value: 
+      objectReference: {fileID: 7249232369718723731, guid: 8348cedb893e9bf4b8df5538b6f921ea, type: 3}
+    - target: {fileID: 7201392040498284869, guid: 93f34b6a61e07314a8a7a40b2131b3fa, type: 3}
+      propertyPath: rippleParent
+      value: 
+      objectReference: {fileID: 535447465}
     - target: {fileID: 7201392040498284869, guid: 93f34b6a61e07314a8a7a40b2131b3fa, type: 3}
       propertyPath: 'worldClues.Array.data[0]'
       value: 
