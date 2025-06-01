@@ -18,9 +18,9 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 	[SerializeField] private GameObject _ink;
     [SerializeField] private GameObject _inkEnd;
     [SerializeField] private GameObject _inkBase;
-    [SerializeField] private float _inkCooldown = 3;
-	[SerializeField] private bool _isCooldown = true;
-	[SerializeField] private float _inkXSize = 8;
+    private float _inkCooldown = 1.5f;
+	private bool _isCooldown = true;
+	private float _inkXSize = 8;
 
 	public CooldownScript _cooldownScript;
 

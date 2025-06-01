@@ -12,16 +12,28 @@ public class CamaraFollorplayer : MonoBehaviour
 
 	public bool _skipIntro = false;
 
+	// Win sequence
+	private bool _winTransitionRequested = false;
+	private Transform _winFocusPoint;
+	private float _winPauseDuration = 2f;
+
 	private float _revealTimer;
 	private float _transitionTimer;
-	
+
 	private bool _isStart = true;
 	private bool _isTransitioning = false;
 	private bool _isFollowingPlayer = false;
+	private bool _isWinMoving = false;
+	private bool _isWinReturning = false;
+	private float _winTimer = 0f;
 
 	private Camera _camera;
 	private Vector3 _startPos;
 	private float _startSize;
+	private Vector3 _winStartPos;
+	private float _winStartSize;
+
+	public GameObject _door;
 
 	void Start()
 	{
@@ -39,6 +51,14 @@ public class CamaraFollorplayer : MonoBehaviour
 
 	void Update()
 	{
+		// Handle win sequence if requested
+		if (_winTransitionRequested)
+		{
+			HandleWinSequence();
+			return;
+		}
+
+		// Original intro logic
 		if (_isFollowingPlayer)
 		{
 			FollowPlayer();
@@ -56,7 +76,7 @@ public class CamaraFollorplayer : MonoBehaviour
 			_revealTimer -= Time.deltaTime;
 			if (_revealTimer <= 0f)
 			{
-				// Begin transition
+				// Begin intro transition
 				_isTransitioning = true;
 				_isStart = false;
 				_transitionTimer = 0f;
@@ -76,6 +96,52 @@ public class CamaraFollorplayer : MonoBehaviour
 			{
 				_isTransitioning = false;
 				_isFollowingPlayer = true;
+			}
+		}
+	}
+
+	private void HandleWinSequence()
+	{
+		// First move to win focus point
+		if (_isWinMoving)
+		{
+			_transitionTimer += Time.deltaTime;
+			float t = Mathf.Clamp01(_transitionTimer / _transitionDuration);
+			transform.position = Vector3.Lerp(_winStartPos, new Vector3(_winFocusPoint.position.x, _winFocusPoint.position.y, -200f), t);
+			if (t >= 1f)
+			{
+				_isWinMoving = false;
+				_winTimer = 0f;
+			}
+		}
+		// Then pause at win point
+		else if (!_isWinReturning)
+		{
+			_winTimer += Time.deltaTime;
+			if (_winTimer >= _winPauseDuration)
+			{
+				// Make Door Desapear
+				if (_winTimer >= 0.35f)
+					_door.SetActive(false);
+
+				// Begin return to player
+				_isWinReturning = true;
+				_transitionTimer = 0f;
+				_winStartPos = transform.position;
+			}
+		}
+		// Finally return to player
+		else
+		{
+			_transitionTimer += Time.deltaTime;
+			float t = Mathf.Clamp01(_transitionTimer / _transitionDuration);
+			transform.position = Vector3.Lerp(_winStartPos, new Vector3(_playerTarget.position.x, _playerTarget.position.y, -200f), t);
+			if (t >= 1f)
+			{
+				_isWinReturning = false;
+				_winTransitionRequested = false;
+				_isFollowingPlayer = true;
+				_playerController._isPaused = false;
 			}
 		}
 	}
@@ -102,5 +168,19 @@ public class CamaraFollorplayer : MonoBehaviour
 		_startBackround.SetActive(false);
 		_topFog.SetActive(true);
 		_playerController._isPaused = false;
+	}
+
+	// Called by GameController when win condition met
+	public void StartWinTransition(Transform winFocus)
+	{
+		if (_winTransitionRequested) return;
+		_winTransitionRequested = true;
+		_isFollowingPlayer = false;
+		_isWinMoving = true;
+		_isWinReturning = false;
+		_winFocusPoint = winFocus;
+		_transitionTimer = 0f;
+		_winStartPos = transform.position;
+		_playerController._isPaused = true;
 	}
 }

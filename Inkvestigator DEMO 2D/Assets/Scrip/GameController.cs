@@ -6,16 +6,19 @@ public class GameController : MonoBehaviour
 
 	[SerializeField] private GameObject _winPanel;
 	[SerializeField] private GameObject _timer;
+	[SerializeField] private Transform _winFocusPoint;
+	[SerializeField] private CamaraFollorplayer _cameraController;
+
+	private bool hasTriggeredWinSequence = false;
 
 	void Update()
 	{
-		if (playerInventory != null && _winPanel != null)
+		if (playerInventory._maxNumOfItems == 0 && !_winPanel.activeSelf && !hasTriggeredWinSequence)
 		{
-			if (playerInventory._maxNumOfItems == 0 && !_winPanel.activeSelf)
-			{
-				_winPanel.SetActive(true);
-				_timer.SetActive(false);	//Stop Timer	
-			}
+			hasTriggeredWinSequence = true;
+
+			_cameraController.StartWinTransition(_winFocusPoint);
+
 		}
 	}
 }
