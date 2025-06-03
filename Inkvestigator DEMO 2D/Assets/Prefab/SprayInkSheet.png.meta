@@ -284,7 +284,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      SprayInkSheet_0: 1169782251482513133
+      SprayInkSheet_1: -2062776019053192804
+      SprayInkSheet_2: 6945605585282656168
+      SprayInkSheet_3: 540438768712056631
+      SprayInkSheet_4: 8795390227796657154
+      SprayInkSheet_5: -7262776849085930296
+      SprayInkSheet_6: -7088171649307442958
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

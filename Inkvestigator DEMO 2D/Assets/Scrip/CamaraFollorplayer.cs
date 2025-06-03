@@ -118,18 +118,20 @@ public class CamaraFollorplayer : MonoBehaviour
 		else if (!_isWinReturning)
 		{
 			_winTimer += Time.deltaTime;
+
+			if (_winTimer >= 0.35f)
+				_door.SetActive(false);
+
 			if (_winTimer >= _winPauseDuration)
 			{
-				// Make Door Desapear
-				if (_winTimer >= 0.35f)
-					_door.SetActive(false);
-
-				// Begin return to player
 				_isWinReturning = true;
 				_transitionTimer = 0f;
 				_winStartPos = transform.position;
+
+				_playerController._isPaused = false; // Unpause player once camera starts returning
 			}
 		}
+
 		// Finally return to player
 		else
 		{
@@ -141,7 +143,6 @@ public class CamaraFollorplayer : MonoBehaviour
 				_isWinReturning = false;
 				_winTransitionRequested = false;
 				_isFollowingPlayer = true;
-				_playerController._isPaused = false;
 			}
 		}
 	}
