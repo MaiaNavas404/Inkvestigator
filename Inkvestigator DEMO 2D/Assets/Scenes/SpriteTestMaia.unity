@@ -4018,6 +4018,14 @@ PrefabInstance:
       value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2958135838085835316, guid: f7926aa21f12ef94398822b1c501e885, type: 3}
+      propertyPath: _inkEnd
+      value: 
+      objectReference: {fileID: 1862174988182990745, guid: 81fe1629b571ff9428fccecccd627917, type: 3}
+    - target: {fileID: 2958135838085835316, guid: f7926aa21f12ef94398822b1c501e885, type: 3}
+      propertyPath: _inkBase
+      value: 
+      objectReference: {fileID: 1862174988182990745, guid: e850d0abbf92d8c48a432476aa2259a1, type: 3}
+    - target: {fileID: 2958135838085835316, guid: f7926aa21f12ef94398822b1c501e885, type: 3}
       propertyPath: _cooldownScript
       value: 
       objectReference: {fileID: 2024516082}
