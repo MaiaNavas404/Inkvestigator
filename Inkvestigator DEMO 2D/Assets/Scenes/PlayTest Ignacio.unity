@@ -143,6 +143,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 357771217
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash (7)
@@ -987,6 +991,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 357771217
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash (5)
@@ -3005,6 +3013,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 3.3103688
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash (1)
@@ -6503,6 +6515,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 357771217
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash (3)
@@ -8400,6 +8416,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 357771217
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash (2)
@@ -9562,6 +9582,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 357771217
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash (6)
@@ -10532,6 +10556,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 357771217
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash (4)
@@ -11305,6 +11333,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 357771217
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: pickupSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash
