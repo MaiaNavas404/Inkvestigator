@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
-<<<<<<< Updated upstream
 	public AudioClip pickupSound; // Assign this in the Inspector
 	private AudioSource audioSource;
+	public int musicLayerIndex;
 
 	public GameObject _popUp;
 
@@ -23,6 +23,21 @@ public class ItemPickup : MonoBehaviour
 		if (other.CompareTag("Player"))
 		{
 			PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
+
+			if (playerInventory != null)
+			{
+				playerInventory.ItemsCollected();
+
+				if (pickupSound != null)
+				{
+					audioSource.PlayOneShot(pickupSound);
+				}
+
+				//  Trigger the music layer
+				FindObjectOfType<MusicLayerManager>().ActivateLayer(musicLayerIndex);
+
+				Destroy(gameObject, pickupSound != null ? pickupSound.length : 0f);
+			}
 
 			// Instantiate the popup at the item's position (pop-up is parent)
 			GameObject popUpInstance = Instantiate(_popUp, transform.position, Quaternion.identity);
@@ -65,41 +80,4 @@ public class ItemPickup : MonoBehaviour
 			}
 		}
 	}
-=======
-    public AudioClip pickupSound;
-    public int musicLayerIndex; //  assign this in Inspector
-    private AudioSource audioSource;
-
-    private void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-        if (audioSource == null)
-        {
-            audioSource = gameObject.AddComponent<AudioSource>();
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
-
-            if (playerInventory != null)
-            {
-                playerInventory.ItemsCollected();
-
-                if (pickupSound != null)
-                {
-                    audioSource.PlayOneShot(pickupSound);
-                }
-
-                //  Trigger the music layer
-                FindObjectOfType<MusicLayerManager>().ActivateLayer(musicLayerIndex);
-
-                Destroy(gameObject, pickupSound != null ? pickupSound.length : 0f);
-            }
-        }
-    }
->>>>>>> Stashed changes
 }
