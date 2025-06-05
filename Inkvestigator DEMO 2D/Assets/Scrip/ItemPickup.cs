@@ -3,9 +3,14 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public AudioClip pickupSound; // Assign this in the Inspector
 	private AudioSource audioSource;
 	public int musicLayerIndex;
+=======
+    public AudioClip pickupSound; // Assign this in the Inspector
+    private AudioSource audioSource;
+>>>>>>> parent of bdc05eb (PopUp PikUps)
 =======
     public AudioClip pickupSound; // Assign this in the Inspector
     private AudioSource audioSource;
@@ -26,6 +31,7 @@ public class ItemPickup : MonoBehaviour
 		{
 			PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 			if (playerInventory != null)
 			{
@@ -69,6 +75,8 @@ public class ItemPickup : MonoBehaviour
 				}
 			}
 
+=======
+>>>>>>> parent of bdc05eb (PopUp PikUps)
 =======
 >>>>>>> parent of bdc05eb (PopUp PikUps)
 			if (playerInventory != null)
