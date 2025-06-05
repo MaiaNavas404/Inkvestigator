@@ -2,28 +2,31 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
+<<<<<<< HEAD
 	public AudioClip pickupSound; // Assign this in the Inspector
 	private AudioSource audioSource;
 	public int musicLayerIndex;
+=======
+    public AudioClip pickupSound; // Assign this in the Inspector
+    private AudioSource audioSource;
+>>>>>>> parent of bdc05eb (PopUp PikUps)
 
-	public GameObject _popUp;
-
-	private void Start()
-	{
-		audioSource = GetComponent<AudioSource>();
-		if (audioSource == null)
-		{
-			// Add an AudioSource if the object doesn't already have one
-			audioSource = gameObject.AddComponent<AudioSource>();
-		}
-	}
-
-	private void OnTriggerEnter2D(Collider2D other)
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            // Add an AudioSource if the object doesn't already have one
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.CompareTag("Player"))
 		{
 			PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
 
+<<<<<<< HEAD
 			if (playerInventory != null)
 			{
 				playerInventory.ItemsCollected();
@@ -66,17 +69,17 @@ public class ItemPickup : MonoBehaviour
 				}
 			}
 
+=======
+>>>>>>> parent of bdc05eb (PopUp PikUps)
 			if (playerInventory != null)
 			{
 				playerInventory.ItemsCollected();
+                if (pickupSound != null)
+                {
+                    audioSource.PlayOneShot(pickupSound);
+                }
 
-				if (pickupSound != null)
-				{
-					audioSource.PlayOneShot(pickupSound);
-				}
-
-				// Destroy the item after the sound duration, but do not destroy the popup
-				Destroy(gameObject, pickupSound != null ? pickupSound.length : 0f);
+                Destroy(gameObject, pickupSound != null ? pickupSound.length : 0f);
 			}
 		}
 	}
