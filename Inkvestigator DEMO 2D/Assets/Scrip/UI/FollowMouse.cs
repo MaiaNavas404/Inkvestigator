@@ -5,7 +5,7 @@ public class MouseCrosshair : MonoBehaviour
 {
 	void Start()
 	{
-		//Cursor.visible = false; // Hide system cursor
+		Cursor.visible = false; // Hide system cursor
 	}
 
 	void Update()
