@@ -13378,18 +13378,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4402549845187449899, guid: 93f34b6a61e07314a8a7a40b2131b3fa, type: 3}
-      propertyPath: m_Color.a
-      value: 0.16470589
-      objectReference: {fileID: 0}
-    - target: {fileID: 5267073982751592985, guid: 93f34b6a61e07314a8a7a40b2131b3fa, type: 3}
-      propertyPath: m_Color.a
-      value: 0.16470589
-      objectReference: {fileID: 0}
-    - target: {fileID: 5617530768595082500, guid: 93f34b6a61e07314a8a7a40b2131b3fa, type: 3}
-      propertyPath: _duration
-      value: 170
-      objectReference: {fileID: 0}
     - target: {fileID: 5617530768595082500, guid: 93f34b6a61e07314a8a7a40b2131b3fa, type: 3}
       propertyPath: _CharacterController
       value: 
@@ -13506,10 +13494,6 @@ PrefabInstance:
       propertyPath: 'worldClues.Array.data[7]'
       value: 
       objectReference: {fileID: 1537911392}
-    - target: {fileID: 7493452367672184522, guid: 93f34b6a61e07314a8a7a40b2131b3fa, type: 3}
-      propertyPath: m_Color.a
-      value: 0.16470589
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
