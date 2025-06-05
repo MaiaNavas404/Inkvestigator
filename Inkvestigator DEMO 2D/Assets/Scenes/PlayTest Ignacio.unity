@@ -144,6 +144,10 @@ PrefabInstance:
       value: 357771217
       objectReference: {fileID: 0}
     - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
@@ -991,6 +995,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 357771217
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
     - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: pickupSound
       value: 
@@ -2913,6 +2921,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 3.3103688
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
     - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: pickupSound
       value: 
@@ -6393,6 +6405,10 @@ PrefabInstance:
       value: 357771217
       objectReference: {fileID: 0}
     - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
@@ -8395,6 +8411,10 @@ PrefabInstance:
       value: 357771217
       objectReference: {fileID: 0}
     - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
@@ -9561,6 +9581,10 @@ PrefabInstance:
       value: 357771217
       objectReference: {fileID: 0}
     - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
@@ -10535,6 +10559,10 @@ PrefabInstance:
       value: 357771217
       objectReference: {fileID: 0}
     - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: pickupSound
       value: 
       objectReference: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
@@ -11311,6 +11339,10 @@ PrefabInstance:
       propertyPath: m_SortingLayerID
       value: 357771217
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
     - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: pickupSound
       value: 
