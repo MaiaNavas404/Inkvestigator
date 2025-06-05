@@ -994,6 +994,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 4741296374494083532, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2.1699998
@@ -1006,6 +1007,8 @@ PrefabInstance:
       propertyPath: _popUp
       value: 
       objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+=======
+>>>>>>> parent of bdc05eb (PopUp PikUps)
 =======
 >>>>>>> parent of bdc05eb (PopUp PikUps)
 =======
@@ -2931,11 +2934,19 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       value: 3.03
       objectReference: {fileID: 0}
     - target: {fileID: 4741296374494083532, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 3.1403768
+=======
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4741296374494083532, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3.3103688
+>>>>>>> parent of bdc05eb (PopUp PikUps)
 =======
       value: 3.2
       objectReference: {fileID: 0}
@@ -6440,6 +6451,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 4741296374494083532, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2.35
@@ -6452,6 +6464,8 @@ PrefabInstance:
       propertyPath: _popUp
       value: 
       objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+=======
+>>>>>>> parent of bdc05eb (PopUp PikUps)
 =======
 >>>>>>> parent of bdc05eb (PopUp PikUps)
 =======
@@ -8362,6 +8376,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 4741296374494083532, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 3.5900002
@@ -8374,6 +8389,8 @@ PrefabInstance:
       propertyPath: _popUp
       value: 
       objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+=======
+>>>>>>> parent of bdc05eb (PopUp PikUps)
 =======
 >>>>>>> parent of bdc05eb (PopUp PikUps)
 =======
@@ -9549,6 +9566,7 @@ PrefabInstance:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - target: {fileID: 4741296374494083532, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2.3400002
@@ -9561,6 +9579,8 @@ PrefabInstance:
       propertyPath: _popUp
       value: 
       objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+=======
+>>>>>>> parent of bdc05eb (PopUp PikUps)
 =======
 >>>>>>> parent of bdc05eb (PopUp PikUps)
 =======
