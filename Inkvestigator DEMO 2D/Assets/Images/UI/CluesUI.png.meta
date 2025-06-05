@@ -219,8 +219,8 @@ TextureImporter:
       name: CluesUI_3
       rect:
         serializedVersion: 2
-        x: 1615
-        y: 227
+        x: 1592
+        y: 226
         width: 244
         height: 152
       alignment: 4
@@ -312,7 +312,7 @@ TextureImporter:
         width: 53
         height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -334,7 +334,7 @@ TextureImporter:
         width: 40
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -343,6 +343,28 @@ TextureImporter:
       bones: []
       spriteID: c1bd32f4be598644cb81786db8ebf898
       internalID: -1863529296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CluesUI_10
+      rect:
+        serializedVersion: 2
+        x: 1553
+        y: 48
+        width: 110
+        height: 133
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd8b10fa3d875084582f3dc9c0746375
+      internalID: 101174537
       vertices: []
       indices: 
       edges: []

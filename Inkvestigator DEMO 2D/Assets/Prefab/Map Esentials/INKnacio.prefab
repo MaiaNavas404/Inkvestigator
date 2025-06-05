@@ -169,12 +169,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d580765f2260446b24cab92a9d8aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 10
+  _moveSpeed: 13.11
   _isPaused: 0
   _ink: {fileID: 1862174988182990745, guid: 4c19431da1c48f140b214ffd0fdfb3d4, type: 3}
   _inkEnd: {fileID: 1862174988182990745, guid: 81fe1629b571ff9428fccecccd627917, type: 3}
   _inkBase: {fileID: 1862174988182990745, guid: e850d0abbf92d8c48a432476aa2259a1, type: 3}
   _cooldownScript: {fileID: 0}
+  _ripple: {fileID: 7249232369718723731, guid: 329ad497af079544481560189bf06770, type: 3}
+  PlayerInventory: {fileID: 4579299030034794537}
+  _numOfRipples: 1
+  _fisrtReppleImige: {fileID: 0}
+  _secondReppleImige: {fileID: 0}
+  _thirdReppleImige: {fileID: 0}
   inkvestigatorAnim: {fileID: 20366283954948397}
 --- !u!114 &4579299030034794537
 MonoBehaviour:
@@ -228,7 +234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2656994450962334247
 Transform:
   m_ObjectHideFlags: 0
