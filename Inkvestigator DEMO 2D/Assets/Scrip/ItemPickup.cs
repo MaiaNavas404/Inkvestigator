@@ -2,66 +2,71 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
-	public AudioClip pickupSound; // Assign this in the Inspector
-	private AudioSource audioSource;
+    public AudioClip pickupSound;           // Assign in Inspector
+    public int musicLayerIndex;             // Set this per item in Inspector
+    public GameObject _popUp;               // Assign pop-up prefab in Inspector
 
-	public GameObject _popUp;
+    private AudioSource audioSource;
 
-	private void Start()
-	{
-		audioSource = GetComponent<AudioSource>();
-		if (audioSource == null)
-		{
-			// Add an AudioSource if the object doesn't already have one
-			audioSource = gameObject.AddComponent<AudioSource>();
-		}
-	}
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+    }
 
-	private void OnTriggerEnter2D(Collider2D other)
-	{
-		if (other.CompareTag("Player"))
-		{
-			PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayerInventory playerInventory = other.GetComponent<PlayerInventory>();
 
-			// Instantiate the popup at the item's position (pop-up is parent)
-			GameObject popUpInstance = Instantiate(_popUp, transform.position, Quaternion.identity);
+            // --- Show Pop-up ---
+            if (_popUp != null)
+            {
+                GameObject popUpInstance = Instantiate(_popUp, transform.position, Quaternion.identity);
 
-			if (popUpInstance != null)
-			{
-				// Get the SpriteRenderer component from the item
-				SpriteRenderer itemSpriteRenderer = GetComponent<SpriteRenderer>();
-				if (itemSpriteRenderer != null)
-				{
-					// Get the SpriteRenderer from the pop-up prefab to change the sprite
-					SpriteRenderer popUpSpriteRenderer = popUpInstance.GetComponentInChildren<SpriteRenderer>();
-					if (popUpSpriteRenderer != null)
-					{
-						// Change the sprite of the pop-up sprite renderer to the item's sprite
-						popUpSpriteRenderer.sprite = itemSpriteRenderer.sprite;
-					}
-					else
-					{
-						Debug.LogError("No SpriteRenderer found in the pop-up prefab!");
-					}
-				}
-				else
-				{
-					Debug.LogError("No SpriteRenderer found on the item!");
-				}
-			}
+                SpriteRenderer itemSpriteRenderer = GetComponent<SpriteRenderer>();
+                SpriteRenderer popUpSpriteRenderer = popUpInstance.GetComponentInChildren<SpriteRenderer>();
 
-			if (playerInventory != null)
-			{
-				playerInventory.ItemsCollected();
+                if (itemSpriteRenderer != null && popUpSpriteRenderer != null)
+                {
+                    popUpSpriteRenderer.sprite = itemSpriteRenderer.sprite;
+                }
+                else
+                {
+                    Debug.LogWarning("Missing SpriteRenderers for popup!");
+                }
+            }
 
-				if (pickupSound != null)
-				{
-					audioSource.PlayOneShot(pickupSound);
-				}
+            // --- Update Player Inventory ---
+            if (playerInventory != null)
+            {
+                playerInventory.ItemsCollected();
+            }
 
-				// Destroy the item after the sound duration, but do not destroy the popup
-				Destroy(gameObject, pickupSound != null ? pickupSound.length : 0f);
-			}
-		}
-	}
+            // --- Play Pickup Sound ---
+            if (pickupSound != null)
+            {
+                audioSource.PlayOneShot(pickupSound);
+            }
+
+            // --- Activate Music Layer ---
+            MusicLayerManager musicManager = FindObjectOfType<MusicLayerManager>();
+            if (musicManager != null)
+            {
+                musicManager.ActivateLayer(musicLayerIndex);
+            }
+            else
+            {
+                Debug.LogWarning("No MusicLayerManager found in the scene.");
+            }
+
+            // --- Destroy this item after sound (or immediately if no sound) ---
+            float delay = pickupSound != null ? pickupSound.length : 0f;
+            Destroy(gameObject, delay);
+        }
+    }
 }
