@@ -34,9 +34,9 @@ public class CluesCollectionScript : MonoBehaviour
 				questions[i].enabled = false;
 				items[i].enabled = true;
 
-				// Instantiate ripple at item's UI position
-				GameObject ripple = Instantiate(_ripple, rippleParent);
-				ripple.transform.position = items[i].transform.position;
+				//// Instantiate ripple at item's UI position
+				//GameObject ripple = Instantiate(_ripple, rippleParent);
+				//ripple.transform.position = items[i].transform.position;
 			}
 		}
 	}

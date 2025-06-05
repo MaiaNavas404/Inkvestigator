@@ -303,6 +303,50 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: CluesUI_9
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 341
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77713eefb3a6c764698a8a2e5c88242d
+      internalID: 1182035947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CluesUI_11
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 348
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1bd32f4be598644cb81786db8ebf898
+      internalID: -1863529296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -319,6 +363,8 @@ TextureImporter:
     nameFileIdTable:
       CluesUI_0: -8095061217851112899
       CluesUI_1: -4278363576719480134
+      CluesUI_10: 101174537
+      CluesUI_11: -1863529296
       CluesUI_2: 1737816373
       CluesUI_3: -1732928462
       CluesUI_4: -1564191611
@@ -326,6 +372,7 @@ TextureImporter:
       CluesUI_6: 2135979352
       CluesUI_7: 2022954855
       CluesUI_8: -2109479011
+      CluesUI_9: 1182035947
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

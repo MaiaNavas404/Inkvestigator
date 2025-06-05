@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5766358129072718629}
   - component: {fileID: 5028825652039127286}
   - component: {fileID: 147690601234055518}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ripple
-  m_TagString: Untagged
+  m_TagString: Ripple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,6 +104,8 @@ MonoBehaviour:
   _minSize: {x: 0.3, y: 0.3, z: 0.3}
   _scaleSpeed: 1
   _fadeDuration: 1
+  _isPlayer: 0
+  _isItem: 0
 --- !u!58 &147690601234055518
 CircleCollider2D:
   m_ObjectHideFlags: 0

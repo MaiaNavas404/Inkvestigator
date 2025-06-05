@@ -2,7 +2,10 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.InputSystem;
+using Image = UnityEngine.UI.Image;
 
 public class CharcaterControllerIgnacio : MonoBehaviour
 {
@@ -16,13 +19,22 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 	// INK
 	[Header("INK")]
 	[SerializeField] private GameObject _ink;
-    [SerializeField] private GameObject _inkEnd;
-    [SerializeField] private GameObject _inkBase;
-    private float _inkCooldown = 1.5f;
+	[SerializeField] private GameObject _inkEnd;
+	[SerializeField] private GameObject _inkBase;
+	private float _inkCooldown = 1.5f;
 	private bool _isCooldown = true;
 	private float _inkXSize = 8;
-
 	public CooldownScript _cooldownScript;
+
+	// RIPPEL
+	[Header("RIPPLE")]
+	[SerializeField] private GameObject _ripple;
+	public PlayerInventory PlayerInventory;
+	public int _numOfRipples = 1;
+	private int _latsNumItems = 8;
+	public Image _fisrtReppleImige;
+	public Image _secondReppleImige;
+	public Image _thirdReppleImige;
 
 	private Rigidbody2D _rb;
 
@@ -42,6 +54,8 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 		Movement();
 
 		ThrowInk();
+
+		Repple();
 	}
 
 	private void Movement()
@@ -49,8 +63,8 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 		// If the mouse is pressed, set the target position
 		if (Input.GetMouseButton(0) && !_isPaused)
 		{
-            inkvestigatorAnim.SetBool("IsMoving", true);
-            _targetPosition = _mousePosition;
+			inkvestigatorAnim.SetBool("IsMoving", true);
+			_targetPosition = _mousePosition;
 			_targetPosition.z = 0f;
 		}
 		else
@@ -140,8 +154,8 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 
 			if (hit.collider != null)
 			{
-                // Get angle from direction
-                float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+				// Get angle from direction
+				float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
 				// Create rotation
 				Quaternion rotation = Quaternion.Euler(0, 0, angle - 90f); // subtract 90 if your prefab points upward
@@ -155,8 +169,8 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 
 				// Base and ENd Ink
 				Instantiate(_inkBase, this.transform.position, rotation);
-                Instantiate(_inkEnd, new Vector2 (hit.point.x, hit.point.y), rotation);
-				
+				Instantiate(_inkEnd, new Vector2(hit.point.x, hit.point.y), rotation);
+
 
 				// Scale the ink on the distance
 				inkInstance.transform.localScale = new Vector3(_inkXSize, distance, 1);
@@ -176,6 +190,51 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 		}
 
 		_isCooldown = true;
+	}
+
+	private void Repple()
+	{
+		if (PlayerInventory._maxNumOfItems < _latsNumItems - 1)
+		{
+			if (_numOfRipples < 3)
+			{
+				_numOfRipples++;
+			}
+			_latsNumItems = PlayerInventory._maxNumOfItems;
+		}
+
+		if (Input.GetMouseButtonDown(2) && _numOfRipples > 0) // 2 is middle mouse button
+		{
+			_numOfRipples--;
+			GameObject ripple = Instantiate(_ripple, transform.position, Quaternion.identity);
+			RippleScript RippleScript = ripple.GetComponent<RippleScript>();
+			RippleScript._isPlayer = true;
+		}
+
+		if (_numOfRipples == 0)
+		{
+			_fisrtReppleImige.gameObject.SetActive(false);
+			_secondReppleImige.gameObject.SetActive(false);
+			_thirdReppleImige.gameObject.SetActive(false);
+		}
+		else if (_numOfRipples == 1)
+		{
+			_fisrtReppleImige.gameObject.SetActive(true);
+			_secondReppleImige.gameObject.SetActive(false);
+			_thirdReppleImige.gameObject.SetActive(false);
+		}
+		else if (_numOfRipples == 2)
+		{
+			_fisrtReppleImige.gameObject.SetActive(true);
+			_secondReppleImige.gameObject.SetActive(true);
+			_thirdReppleImige.gameObject.SetActive(false);
+		}
+		else if (_numOfRipples == 3)
+		{
+			_fisrtReppleImige.gameObject.SetActive(true);
+			_secondReppleImige.gameObject.SetActive(true);
+			_thirdReppleImige.gameObject.SetActive(true);
+		}
 	}
 }
 

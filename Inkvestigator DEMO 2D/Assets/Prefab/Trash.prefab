@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3824203290129621326}
   - component: {fileID: 4741296374494083532}
   - component: {fileID: 4969391728393175732}
+  - component: {fileID: 7090730487961457085}
   m_Layer: 0
   m_Name: Trash
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.46083, y: 0.46083, z: 0.46083}
+  m_LocalScale: {x: 0.7866829, y: 0.7866829, z: 0.7866829}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,10 +76,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: -4559169192063225669, guid: 15119e081b3b7b944b3fa3def429182a, type: 3}
+  m_SortingLayerID: 357771217
+  m_SortingLayer: 1
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 1953971982, guid: b60d450e42424024eb5debb1edda9e0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -127,7 +128,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.9599999, y: 3.160352}
+    oldSize: {x: 1.93, y: 3.2603915}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -147,3 +148,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bada47e10d1d24eaa927ff6a75a64f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSound: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
+  musicLayerIndex: 0
+  _popUp: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+  _ripple: {fileID: 7249232369718723731, guid: 329ad497af079544481560189bf06770, type: 3}
+  _isRipple: 0
+--- !u!50 &7090730487961457085
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5895013100929868638}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

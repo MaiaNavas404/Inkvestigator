@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2490742768616446176}
   - component: {fileID: 9196697726859305429}
-  - component: {fileID: 6007760239234374585}
   m_Layer: 0
   m_Name: GAME CONTROLLER
   m_TagString: Untagged
@@ -48,27 +47,5 @@ MonoBehaviour:
   playerInventory: {fileID: 0}
   _winPanel: {fileID: 0}
   _timer: {fileID: 0}
---- !u!114 &6007760239234374585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4902358611641462874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e7cb8b4acfbfd42b1ac88f5c1e9b05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _ripple: {fileID: 7249232369718723731, guid: 329ad497af079544481560189bf06770, type: 3}
-  _player: {fileID: 0}
-  _Trash:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  _spawnInterval: 20
+  _winFocusPoint: {fileID: 0}
+  _cameraController: {fileID: 0}
