@@ -419,6 +419,14 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.0102413
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _ripple
+      value: 
+      objectReference: {fileID: 7249232369718723731, guid: 329ad497af079544481560189bf06770, type: 3}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash (7)
@@ -1915,6 +1923,14 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.850342
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _ripple
+      value: 
+      objectReference: {fileID: 7249232369718723731, guid: 329ad497af079544481560189bf06770, type: 3}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash (5)
@@ -4599,6 +4615,18 @@ PrefabInstance:
     - target: {fileID: 4741296374494083532, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.9803576
+      objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _ripple
+      value: 
+      objectReference: {fileID: 7249232369718723731, guid: 329ad497af079544481560189bf06770, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: musicLayerIndex
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
@@ -10009,6 +10037,18 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.400288
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _ripple
+      value: 
+      objectReference: {fileID: 7249232369718723731, guid: 329ad497af079544481560189bf06770, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: musicLayerIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash (3)
@@ -13371,6 +13411,18 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 3.1403768
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _ripple
+      value: 
+      objectReference: {fileID: 7249232369718723731, guid: 329ad497af079544481560189bf06770, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: musicLayerIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash (2)
@@ -14823,6 +14875,14 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.390287
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _ripple
+      value: 
+      objectReference: {fileID: 7249232369718723731, guid: 329ad497af079544481560189bf06770, type: 3}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash (6)
@@ -16691,6 +16751,18 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.7403288
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _ripple
+      value: 
+      objectReference: {fileID: 7249232369718723731, guid: 329ad497af079544481560189bf06770, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: musicLayerIndex
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash (4)
@@ -18518,6 +18590,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2495831823503011792, guid: 93f34b6a61e07314a8a7a40b2131b3fa, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2748101881063236939, guid: 93f34b6a61e07314a8a7a40b2131b3fa, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -19732,6 +19808,14 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 3.2603915
       objectReference: {fileID: 0}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _popUp
+      value: 
+      objectReference: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
+    - target: {fileID: 4969391728393175732, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
+      propertyPath: _ripple
+      value: 
+      objectReference: {fileID: 7249232369718723731, guid: 329ad497af079544481560189bf06770, type: 3}
     - target: {fileID: 5895013100929868638, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_Name
       value: Trash

@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 3
   tags:
   - Wall
+  - Ripple
+  - Item
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - Water
   - UI
   - Wall
-  - 
-  - 
+  - Ripple
+  - Item
   - 
   - 
   - 

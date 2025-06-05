@@ -147,3 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bada47e10d1d24eaa927ff6a75a64f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupSound: {fileID: 0}
+  musicLayerIndex: 0
+  _popUp: {fileID: 0}

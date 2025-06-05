@@ -10,11 +10,16 @@ public class RippleScript : MonoBehaviour
 	private bool _isFading = false;
 	private float _fadeTimer = 0f;
 	private SpriteRenderer _spriteRenderer;
+	private Collider2D _collider;
+
+	public bool _isPlayer = false;
+	public bool _isItem = false;
 
 	void Start()
 	{
 		transform.localScale = _minSize;
 		_spriteRenderer = GetComponent<SpriteRenderer>();
+		_collider = GetComponent<Collider2D>();
 	}
 
 	void Update()
@@ -24,6 +29,7 @@ public class RippleScript : MonoBehaviour
 
 		if (_isFading)
 		{
+			_collider.enabled = false;
 			_fadeTimer += Time.deltaTime;
 			float alpha = Mathf.Lerp(1f, 0f, _fadeTimer / _fadeDuration);
 			if (_spriteRenderer != null)
@@ -43,7 +49,13 @@ public class RippleScript : MonoBehaviour
 	private void OnTriggerEnter2D(Collider2D other)
 	{
 		// Assuming player has tag "Player"
-		if (!_isFading && other.CompareTag("Player"))
+		if (!_isFading && other.CompareTag("Player") && _isItem)
+		{
+			_isFading = true;
+			_fadeTimer = 0f;
+		}
+
+		if (!_isFading && other.CompareTag("Item") && _isPlayer)
 		{
 			_isFading = true;
 			_fadeTimer = 0f;

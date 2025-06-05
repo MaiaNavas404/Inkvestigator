@@ -1,4 +1,9 @@
+using Mono.Cecil.Cil;
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections;
+using static UnityEngine.UIElements.UxmlAttributeDescription;
 
 public class ItemPickup : MonoBehaviour
 {
@@ -8,7 +13,12 @@ public class ItemPickup : MonoBehaviour
 
     private AudioSource audioSource;
 
-    private void Start()
+    [Header("Ripple")]
+    public GameObject _ripple;
+    [SerializeField] private bool _isRipple = false;
+	private bool _rippleCreated = false;
+
+	private void Start()
     {
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
@@ -17,7 +27,30 @@ public class ItemPickup : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+	private void Update()
+	{
+		if (_isRipple && !_rippleCreated)
+		{
+			_rippleCreated = true;  // prevent further ripples
+			_isRipple = false;
+
+			GameObject ripple = Instantiate(_ripple, transform.position, Quaternion.identity);
+			RippleScript rippleScript = ripple.GetComponent<RippleScript>();
+			rippleScript._isItem = true;
+			StartCoroutine(ResetRippleFlag(1f)); // Reset after 1 second
+
+		}
+	}
+
+	IEnumerator ResetRippleFlag(float delay)
+	{
+		yield return new WaitForSeconds(delay);
+		_rippleCreated = false;
+	}
+
+
+
+	private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -35,10 +68,6 @@ public class ItemPickup : MonoBehaviour
                 {
                     popUpSpriteRenderer.sprite = itemSpriteRenderer.sprite;
                 }
-                else
-                {
-                    Debug.LogWarning("Missing SpriteRenderers for popup!");
-                }
             }
 
             // --- Update Player Inventory ---
@@ -51,22 +80,31 @@ public class ItemPickup : MonoBehaviour
             if (pickupSound != null)
             {
                 audioSource.PlayOneShot(pickupSound);
-            }
+			}
 
-            // --- Activate Music Layer ---
-            MusicLayerManager musicManager = FindObjectOfType<MusicLayerManager>();
-            if (musicManager != null)
-            {
-                musicManager.ActivateLayer(musicLayerIndex);
-            }
-            else
-            {
-                Debug.LogWarning("No MusicLayerManager found in the scene.");
-            }
+			// Warning(active)    CS0618  'Object.FindObjectOfType<T>()' is obsolete: 'Object.FindObjectOfType has been deprecated. Use Object.FindFirstObjectByType instead or if finding any instance is acceptable the faster Object.FindAnyObjectByType'  Assembly - CSharp C: \Users\ignav\OneDrive\Documentos\GitHub\Inkvestigator\Inkvestigator DEMO 2D\Assets\Scrip\ItemPickup.cs    60
 
-            // --- Destroy this item after sound (or immediately if no sound) ---
-            float delay = pickupSound != null ? pickupSound.length : 0f;
-            Destroy(gameObject, delay);
-        }
-    }
+			// --- Activate Music Layer ---
+			MusicLayerManager musicManager = FindFirstObjectByType<MusicLayerManager>();
+			if (musicManager != null)
+			{
+				musicManager.ActivateLayer(musicLayerIndex);
+			}
+
+
+			// --- Destroy this item after sound (or immediately if no sound) ---
+			float delay = pickupSound != null ? pickupSound.length : 0f;
+			Destroy(gameObject, delay);
+		}
+
+		if (other.CompareTag("Ripple") && !_isRipple && !_rippleCreated)
+		{
+			RippleScript rippleScript = other.GetComponent<RippleScript>();
+
+			if (rippleScript._isPlayer)
+				_isRipple = true;
+		}
+
+
+	}
 }
