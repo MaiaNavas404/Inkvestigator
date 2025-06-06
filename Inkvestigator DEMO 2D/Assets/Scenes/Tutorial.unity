@@ -21826,7 +21826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f333db5319b994458fbd5583d54695c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneToLoad: PlayTest Ignacio
+  _sceneToLoad: StoryVideo
   _delay: 1.5
   _isWinState: 0
   _isLoadNextScene: 1

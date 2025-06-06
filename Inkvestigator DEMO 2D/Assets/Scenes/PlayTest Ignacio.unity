@@ -1676,15 +1676,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6188697975941751409, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.7866829
+      value: 1.329022
       objectReference: {fileID: 0}
     - target: {fileID: 6188697975941751409, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.7866829
+      value: 1.329022
       objectReference: {fileID: 0}
     - target: {fileID: 6188697975941751409, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7866829
+      value: 1.329022
       objectReference: {fileID: 0}
     - target: {fileID: 6188697975941751409, guid: a348d68bad813384f9659f0fb7001e72, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4413,7 +4413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &426355733
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13723,7 +13723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!328 &1291707204
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -23446,7 +23446,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _uiElement: {fileID: 4871211621967008943}
   _referenceImage: {fileID: 1406895961}
-  _duration: 30
+  _duration: 2
   _lerpDuration: 1
 --- !u!1001 &5282141148465585926
 PrefabInstance:
@@ -23526,7 +23526,7 @@ PrefabInstance:
       objectReference: {fileID: 585364548}
     - target: {fileID: 8323281582653284982, guid: cc6f40af0f4922842aeec557faeb8988, type: 3}
       propertyPath: _revealDuration
-      value: 34
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8323281582653284982, guid: cc6f40af0f4922842aeec557faeb8988, type: 3}
       propertyPath: _startBackround
