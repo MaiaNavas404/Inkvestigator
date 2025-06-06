@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 357771217
   m_SortingLayer: 1
   m_SortingOrder: 5
-  m_Sprite: {fileID: 1953971982, guid: b60d450e42424024eb5debb1edda9e0e, type: 3}
+  m_Sprite: {fileID: 8033092973025764044, guid: 7633c7b7344f96d428e1d9e603e0b578, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,7 +128,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.93, y: 3.2603915}
+    oldSize: {x: 0.9, y: 2.25}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -149,7 +149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickupSound: {fileID: 8300000, guid: a9fb56cfdcbf988418c2729245e472fe, type: 3}
-  musicLayerIndex: 0
+  _echoSound: {fileID: 8300000, guid: 52fb764d4b62e6b4a805dfeb8832cd91, type: 3}
+  musicLayerIndex: 7
   _popUp: {fileID: 1464232887208404486, guid: eae308f63c8550f4dadffc319acb99e2, type: 3}
   _ripple: {fileID: 7249232369718723731, guid: 329ad497af079544481560189bf06770, type: 3}
   _isRipple: 0

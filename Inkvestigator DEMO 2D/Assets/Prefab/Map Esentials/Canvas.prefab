@@ -1437,6 +1437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSceneName: MainMenu
+  imageToHide: {fileID: 0}
 --- !u!1 &1878485524220188265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2022,16 +2023,16 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3118245757063093400}
-  - {fileID: 6008975283075405032}
   - {fileID: 2237331002417526016}
   - {fileID: 5803507570300161649}
-  - {fileID: 6660471437970940653}
+  - {fileID: 6008975283075405032}
   - {fileID: 2697321823222907325}
   - {fileID: 797469447009589493}
   - {fileID: 6163937494114229034}
   - {fileID: 2547962266654703439}
   - {fileID: 6984137613062515471}
   - {fileID: 659999225601634399}
+  - {fileID: 6660471437970940653}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5789,6 +5790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuSceneName: MainMenu
+  imageToHide: {fileID: 0}
 --- !u!1 &8772879388511464015
 GameObject:
   m_ObjectHideFlags: 0

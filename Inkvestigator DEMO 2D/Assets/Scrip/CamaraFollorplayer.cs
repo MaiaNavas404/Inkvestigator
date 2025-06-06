@@ -35,6 +35,8 @@ public class CamaraFollorplayer : MonoBehaviour
 
 	public GameObject _door;
 
+	private bool _playerPaused = false; // Flag to track if the player has been paused
+
 	void Start()
 	{
 		_camera = Camera.main;
@@ -46,7 +48,7 @@ public class CamaraFollorplayer : MonoBehaviour
 		}
 
 		_revealTimer = _revealDuration;
-		_playerController._isPaused = true;
+		_playerController._isPaused = true; // Initially pause the player
 	}
 
 	void Update()
@@ -96,6 +98,11 @@ public class CamaraFollorplayer : MonoBehaviour
 			{
 				_isTransitioning = false;
 				_isFollowingPlayer = true;
+				if (!_playerPaused) // Only unpause once after transition ends
+				{
+					_playerController._isPaused = false;
+					_playerPaused = true; // Ensure we don't unpause again
+				}
 			}
 		}
 	}
@@ -128,7 +135,12 @@ public class CamaraFollorplayer : MonoBehaviour
 				_transitionTimer = 0f;
 				_winStartPos = transform.position;
 
-				_playerController._isPaused = false; // Unpause player once camera starts returning
+				// Unpause player once camera starts returning
+				if (!_playerPaused) // Only pause once
+				{
+					_playerController._isPaused = false;
+					_playerPaused = true; // Prevent it from being paused again
+				}
 			}
 		}
 
@@ -156,7 +168,7 @@ public class CamaraFollorplayer : MonoBehaviour
 		pos.y = _playerTarget.position.y;
 		pos.z = -200f;
 		transform.position = pos;
-		_playerController._isPaused = false;
+		//_playerController._isPaused = false;
 	}
 
 	void FollowPlayerImmediately()
@@ -182,6 +194,7 @@ public class CamaraFollorplayer : MonoBehaviour
 		_winFocusPoint = winFocus;
 		_transitionTimer = 0f;
 		_winStartPos = transform.position;
-		_playerController._isPaused = true;
+		_playerController._isPaused = true; // Pause the player when the win transition begins
+		_playerPaused = false; // Reset the flag, allowing pausing again
 	}
 }

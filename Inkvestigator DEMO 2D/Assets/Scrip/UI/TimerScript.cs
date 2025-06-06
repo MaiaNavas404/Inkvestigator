@@ -13,6 +13,9 @@ public class TimerScript : MonoBehaviour
 	[SerializeField] private GameObject _gameOverPanel;
 	public CharcaterControllerIgnacio _CharacterController;
 
+	// New public bool to control pause state
+	public bool _isPaused;
+
 	private void Start()
 	{
 		Begin(_duration);
@@ -28,6 +31,13 @@ public class TimerScript : MonoBehaviour
 	{
 		while (_remainingDuration >= 0)
 		{
+			// If the timer is paused, wait until it is unpaused
+			while (_isPaused)
+			{
+				yield return null; // Wait here until _isPaused is false
+			}
+
+			// Timer runs when _isPaused is false
 			_remainingDuration -= Time.deltaTime;
 
 			float progress = Mathf.InverseLerp(0, _duration, _remainingDuration);
@@ -48,4 +58,3 @@ public class TimerScript : MonoBehaviour
 		_gameOverPanel.SetActive(true);
 	}
 }
-

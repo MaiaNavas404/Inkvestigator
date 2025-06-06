@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.InputSystem;
 using Image = UnityEngine.UI.Image;
+using UnityEngine.Audio;
 
 public class CharcaterControllerIgnacio : MonoBehaviour
 {
@@ -35,6 +36,10 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 	public Image _fisrtReppleImige;
 	public Image _secondReppleImige;
 	public Image _thirdReppleImige;
+	public AudioClip _rippleSound;
+
+	private AudioSource audioSource;
+
 
 	private Rigidbody2D _rb;
 
@@ -44,6 +49,12 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 	{
 		_rb = GetComponent<Rigidbody2D>();
 		_targetPosition = transform.position;
+
+		audioSource = GetComponent<AudioSource>();
+		if (audioSource == null)
+		{
+			audioSource = gameObject.AddComponent<AudioSource>();
+		}
 	}
 
 	private void Update()
@@ -205,6 +216,7 @@ public class CharcaterControllerIgnacio : MonoBehaviour
 
 		if (Input.GetMouseButtonDown(2) && _numOfRipples > 0) // 2 is middle mouse button
 		{
+			audioSource.PlayOneShot(_rippleSound);
 			_numOfRipples--;
 			GameObject ripple = Instantiate(_ripple, transform.position, Quaternion.identity);
 			RippleScript RippleScript = ripple.GetComponent<RippleScript>();

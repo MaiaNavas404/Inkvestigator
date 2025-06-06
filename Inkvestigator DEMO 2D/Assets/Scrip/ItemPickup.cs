@@ -7,6 +7,7 @@ using static UnityEngine.UIElements.UxmlAttributeDescription;
 public class ItemPickup : MonoBehaviour
 {
 	public AudioClip pickupSound;           // Assign in Inspector
+	public AudioClip _echoSound;           // Assign in Inspector
 	public int musicLayerIndex;             // Set this per item in Inspector
 	public GameObject _popUp;               // Assign pop-up prefab in Inspector
 
@@ -99,6 +100,7 @@ public class ItemPickup : MonoBehaviour
 		if (other.CompareTag("Ripple") && !_isRipple && !_rippleCreated)
 		{
 			RippleScript rippleScript = other.GetComponent<RippleScript>();
+			audioSource.PlayOneShot(_echoSound);
 
 			if (rippleScript._isPlayer)
 				_isRipple = true;
