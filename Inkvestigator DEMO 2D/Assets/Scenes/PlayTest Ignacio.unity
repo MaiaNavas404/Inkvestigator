@@ -15335,7 +15335,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 94, y: -100}
+  m_AnchoredPosition: {x: 99.8, y: -103.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1406895962
@@ -21808,7 +21808,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 1.5383806, y: -0.4604165}
+  m_Offset: {x: 0.5458262, y: -0.4604165}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -21818,7 +21818,7 @@ BoxCollider2D:
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 9.219252, y: 1.8444902}
+  m_Size: {x: 7.234141, y: 1.8444902}
   m_EdgeRadius: 0
 --- !u!212 &2026197018
 SpriteRenderer:
@@ -23073,7 +23073,7 @@ PrefabInstance:
       objectReference: {fileID: 1805554945}
     - target: {fileID: 1047729722454921994, guid: 93f34b6a61e07314a8a7a40b2131b3fa, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1845190983057810614, guid: 93f34b6a61e07314a8a7a40b2131b3fa, type: 3}
       propertyPath: m_IsActive
